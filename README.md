@@ -47,6 +47,11 @@ substructures, subformulas = ms2x.approximate_substructures_by_fragments([151.03
 - time-cut off for large fragment-molecule combination should be manually changable
 - elements used for formula search should be a user input
 
+
+## 🧪 Usecase
+MS2X was used to generate maccs fingerprints for fragments (ms2x → substructure → fingerprints). Find out more about it in the MS2MACCS usecase folder.
+
+
 ## 📬 Get in Touch
 
 💡 Questions, ideas, or contributions? Open an issue.
