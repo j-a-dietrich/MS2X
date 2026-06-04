@@ -1,6 +1,6 @@
 # MS2X for MS2MACCS
 
-[MSMACCS repository](https://github.com/j-a-dietrich/MS2MACCS)
+[MS2MACCS repository](https://github.com/j-a-dietrich/MS2MACCS)
 
 MS2MACCS predicts MACCS fingerprints for positive and negative mode from MS2 data. It relies on "substructure MACCS" (MACCS fingerprints for a specific fragment/mz). These "substructure MACCS" were approximated with MS2X.
 
