@@ -5,7 +5,7 @@ MS2X stands for MS2 eXplained and gives structural fragment-annotations for a gi
 
 ## ✨ Why use MS2X?
 ⚡ The current setup allows large scale analysis of MS2 dataset (speed heavily depends on molecular size and number of fragments)<br>
-🔍 Understandble - no fancy ML algorithm, just brute force graph search combined with BertzCT allows to retrace how the algorithm comes up with the recommended substructures <br>
+🔍 Understandable - no fancy ML algorithm, just brute force graph search combined with BertzCT candidate ranking. This allows to understand the limitations more easily. <br>
 ⚠️ Limitations: The recommended structures are only approximations and do not rely on chemical knowledge, but simply on the idea that the molecular complexity of the produced fragments is lower for correct fragmentation pathway! <br>
 
 ## 🚀 Quickstart
