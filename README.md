@@ -8,6 +8,16 @@
 🔍 Understandable - no fancy ML algorithm, just brute force graph search combined with BertzCT candidate ranking. This allows to understand the limitations more easily. <br>
 ⚠️ Limitations: The recommended structures are only approximations and do not rely on chemical knowledge, but simply on the idea that the molecular complexity of the produced fragments is lower for correct fragmentation pathway! <br>
 
+## 🛠 Installation
+```
+conda create -n ms2x python=3.10
+conda activate ms2x
+
+git clone https://github.com/j-a-dietrich/MS2X.git
+cd MS2X
+pip install -e .
+```
+
 ## 🚀 Quickstart
 **Spectra based**
 ```
