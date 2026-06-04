@@ -1,6 +1,6 @@
 ![header](imgs/logo.jpg)
 
-MS2X stands for MS2 eXplained and gives structural fragment-annotations for a given smiles-spectrum pair. 
+**MS2X stands for MS2 eXplained and gives structural fragment-annotations for a given smiles-spectrum pair.**
 
 
 ## ✨ Why use MS2X?
