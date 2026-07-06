@@ -5,6 +5,7 @@ from rdkit import Chem
 from rdkit.Chem import rdMolDescriptors
 #from rdkit.Chem.GraphDescriptors import BertzCT
 from ms2x.adapted_BertzCT import BertzCT
+#from adapted_BertzCT import BertzCT
 from rdkit.Chem.rdmolfiles import CanonicalRankAtoms
 
 from find_mfs import FormulaFinder
@@ -124,7 +125,7 @@ class MS2X:
         df = (
             self.ff.find_formulae(
                 frag_mz,
-                charge=1,
+                charge=self.charge,
                 error_ppm=50,
                 filter_rdbe=(0, 20),
                 max_counts=mol_formula,
@@ -485,11 +486,12 @@ class MS2X:
     # Pipeline
     # -----------------------------------------------------
 
-    def approximate_substructure(self, spec):
+    def approximate_substructure(self, spec, charge=1):
 
         results = []
         formulas = []
         complexities = []
+        self.charge = charge
 
         self._score_cache = set()
 
@@ -532,6 +534,8 @@ class MS2X:
                     losses,
                 )
 
+                score = score / BertzCT(mol)
+
                 if score > best_score:
                     best_score = score
                     best = frag
@@ -544,11 +548,12 @@ class MS2X:
         return results, formulas, complexities
     
 
-    def approximate_substructure_by_fragments(self, fragments, smiles):
+    def approximate_substructure_by_fragments(self, fragments, smiles, charge=1):
 
         results = []
         formulas = []
         complexities = []
+        self.charge = charge
 
         self._score_cache = set()
 
@@ -594,6 +599,8 @@ class MS2X:
                     frag,
                     losses,
                 )
+
+                score = score / BertzCT(mol)
 
                 if score > best_score:
                     best_score = score
